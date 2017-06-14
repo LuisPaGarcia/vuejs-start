@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ mensaje }}
+    </div>
+
+    <div id="app2">
+        <span v-bind:class = "claseIn" >
+            Esto debe tener la clase {{ claseIn }}
+        </span>
+    </div>
+
+    <div id="app3">
+        <button v-on:click="seen = !seen"> DARE</button>
+        <p v-if="seen">Now you see me</p>
+    </div>
+
+    <div id="app4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+
+    <div id="app5">
+        <p> {{ mensaje }} </p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+
+    <div id="app6">
+        <p> {{ mensaje }} </p>
+        <input type="text" v-model="mensaje">
+    </div>
+
+    <div id="example">
+        <my-component></my-component>
+        <my-component></my-component>
+        <my-component></my-component>
+        <my-component></my-component>
+        <my-component></my-component>
+    </div>
+    
+    <script src="https://unpkg.com/vue"></script>
+    <script src="app.js"></script>
+</body>
+</html>
