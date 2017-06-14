@@ -57,13 +57,6 @@ let app6 = new Vue({
 Vue.component('my-component', {
   template: '<li>A custom component!</li>'
 })
-/*
-var jsonDataTabla = $.ajax({
-    url: "http://calendar.geekdeguatemala.com/calendarproto/php/getData.php",
-    dataType: "json",
-    async: false
-}).responseText;
-*/
 
 // create a root instance
 new Vue({
